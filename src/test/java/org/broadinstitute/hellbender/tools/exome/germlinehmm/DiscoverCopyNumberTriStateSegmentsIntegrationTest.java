@@ -1,9 +1,14 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.germlinehmm;
 
 import org.broadinstitute.hellbender.cmdline.StandardArgumentDefinitions;
+import org.broadinstitute.hellbender.tools.exome.CopyNumberTriStateSegmentsCallerIntegrationTest;
+import org.broadinstitute.hellbender.tools.exome.Target;
+import org.broadinstitute.hellbender.tools.exome.TargetArgumentCollection;
+import org.broadinstitute.hellbender.tools.exome.TargetCollection;
 import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateHiddenMarkovModelArgumentCollection;
 import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateSegmentRecord;
 import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateSegmentRecordReader;
+import org.broadinstitute.hellbender.tools.exome.germlinehmm.DiscoverCopyNumberTriStateSegments;
 import org.broadinstitute.hellbender.utils.IndexRange;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;

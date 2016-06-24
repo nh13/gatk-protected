@@ -52,7 +52,7 @@ public final class SampleCoverageStats {
      *
      * @throws IllegalArgumentException if {@code sample} is {@code null}.
      */
-    SampleCoverageStats(final String sample, final double mean, final double variance) {
+    public SampleCoverageStats(final String sample, final double mean, final double variance) {
         this.sample = Utils.nonNull(sample, "the sample cannot be null");
         this.mean = mean;
         this.variance = variance < 0 ? -variance : variance;
