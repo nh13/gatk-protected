@@ -5,6 +5,7 @@ import htsjdk.variant.vcf.VCFConstants;
 import org.broadinstitute.hellbender.exceptions.GATKException;
 import org.broadinstitute.hellbender.tools.exome.CopyNumberTriStateAllele;
 import org.broadinstitute.hellbender.utils.MathUtils;
+import org.broadinstitute.hellbender.utils.Utils;
 import org.broadinstitute.hellbender.utils.param.ParamUtils;
 
 import java.util.*;
@@ -37,7 +38,7 @@ public class VariantEvaluationContextBuilder extends VariantContextBuilder {
 
     @Override
     public VariantEvaluationContextBuilder alleles(final Collection<Allele> alleles) {
-        ParamUtils.noNulls(alleles, "the input cannot contain null alleles");
+        Utils.containsNoNull(alleles, "the input cannot contain null alleles");
         validateAlleleStrings(alleles.stream().map(Allele::getDisplayString).collect(Collectors.toList()));
         if (!alleles.iterator().next().isReference()) {
             throw new IllegalArgumentException("the first allele must be a reference allele");
@@ -47,7 +48,7 @@ public class VariantEvaluationContextBuilder extends VariantContextBuilder {
     }
 
     private void validateAlleleStrings(final List<String> allelesString) {
-        ParamUtils.noNulls(allelesString, "the input cannot contain null strings");
+        Utils.containsNoNull(allelesString, "the input cannot contain null strings");
         if (allelesString.isEmpty()) {
             throw new IllegalArgumentException("the allele list cannot be empty");
         } if (!allelesString.get(0).equals(CopyNumberTriStateAllele.REF.getDisplayString())) {
