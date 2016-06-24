@@ -31,7 +31,7 @@ public final class AlleleFractionDataUnitTest {
         ac.add(new AllelicCount(new SimpleInterval("chr", 10, 10), 1, 1));
         ac.add(new AllelicCount(new SimpleInterval("chr", 11, 11), 2, 2));
 
-        final Genome genome = new Genome(AlleleFractionSimulatedData.TRIVIAL_TARGETS, ac, "SAMPLE");
+        final Genome genome = new Genome(AlleleFractionSimulatedData.TRIVIAL_TARGETS, ac);
 
         final SegmentedGenome segmentedGenome = new SegmentedGenome(segments, genome);
 

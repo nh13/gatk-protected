@@ -179,7 +179,7 @@ public class SegmentUtilsUnitTest extends BaseTest {
                 new SimpleInterval("chr2", 10, 10));
 
         final List<SimpleInterval> unionedSegments =
-                SegmentUtils.unionSegments(targetSegments, snpSegments, new Genome(counts, snps, "test"));
+                SegmentUtils.unionSegments(targetSegments, snpSegments, new Genome(counts, snps));
         final List<SimpleInterval> expectedLeft = Arrays.asList(
                 new SimpleInterval("chr1", 1, 10),
                 new SimpleInterval("chr1", 20, 40),

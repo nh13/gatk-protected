@@ -221,7 +221,7 @@ public final class AlleleFractionModellerUnitTest extends BaseTest {
 
         final double minorFractionTolerance = 0.025;
 
-        final Genome genome = new Genome(AlleleFractionSimulatedData.TRIVIAL_TARGETS, sample.getCounts(), "test");
+        final Genome genome = new Genome(AlleleFractionSimulatedData.TRIVIAL_TARGETS, sample.getCounts());
         final List<SimpleInterval> segments = SegmentUtils.readIntervalsFromSegmentFile(SEGMENTS_FILE);
         final SegmentedGenome segmentedGenome = new SegmentedGenome(segments, genome);
 

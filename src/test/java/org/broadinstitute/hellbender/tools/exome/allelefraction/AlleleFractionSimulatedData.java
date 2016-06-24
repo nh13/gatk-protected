@@ -81,7 +81,7 @@ public final class AlleleFractionSimulatedData {
             }
         }
 
-        final Genome genome = new Genome(TRIVIAL_TARGETS, alleleCounts, "SAMPLE");
+        final Genome genome = new Genome(TRIVIAL_TARGETS, alleleCounts);
         segmentedGenome = new SegmentedGenome(segments, genome);
         trueState = new AlleleFractionState(biasMean, biasVariance, outlierProbability, minorFractions);
     };
