@@ -15,7 +15,6 @@ import org.broadinstitute.hellbender.cmdline.programgroups.CopyNumberProgramGrou
 import org.broadinstitute.hellbender.exceptions.UserException;
 import org.broadinstitute.hellbender.tools.exome.*;
 import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateAllele;
-import org.broadinstitute.hellbender.tools.exome.germlinehmm.DiscoverCopyNumberTriStateSegments;
 import org.broadinstitute.hellbender.tools.exome.germlinehmm.GenotypeCopyNumberTriStateSegments;
 import org.broadinstitute.hellbender.utils.*;
 
@@ -30,7 +29,7 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 /**
- * Tool to evaluate the output of {@link DiscoverCopyNumberTriStateSegments}.
+ * Tool to evaluate the output of {@link org.broadinstitute.hellbender.tools.exome.germlinehmm.DiscoverCopyNumberTriStateSegments}.
  * <p>Example:</p>
  * <pre>
  * java -jar build/libs/hellbender-protected.jar EvaluateCopyNumberTriStateCalls \

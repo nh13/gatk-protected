@@ -30,7 +30,7 @@ public class ConvertGSVariantsToSegmentsIntegrationTest extends CommandLineProgr
             new File("src/test/resources/org/broadinstitute/hellbender/tools/exome/eval", "gs-calls.vcf.gz");
 
     private static final File TEST_TARGET_FILE =
-            new File("src/test/resources/org/broadinstitute/hellbender/tools/exome/hmm/realistic-targets.tab");
+            new File("src/test/resources/org/broadinstitute/hellbender/tools/exome/germlinehmm/realistic-targets.tab");
 
     @Override
     public String getTestedClassName() {

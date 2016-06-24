@@ -28,7 +28,7 @@ import java.util.stream.Stream;
  */
 public abstract class CopyNumberTriStateSegmentsCallerIntegrationTest extends CommandLineProgramTest {
 
-    public static final File REALISTIC_TARGETS_FILE = new File("src/test/resources/org/broadinstitute/hellbender/tools/exome/hmm/realistic-targets.tab");
+    public static final File REALISTIC_TARGETS_FILE = new File("src/test/resources/org/broadinstitute/hellbender/tools/exome/germlinehmm/realistic-targets.tab");
     public static final TargetCollection<Target> REALISTIC_TARGETS;
 
     static {
