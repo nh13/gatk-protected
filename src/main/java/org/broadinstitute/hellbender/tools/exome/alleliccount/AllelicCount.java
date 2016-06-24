@@ -1,4 +1,4 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.alleliccount;
 
 import htsjdk.samtools.util.Locatable;
 import org.broadinstitute.hellbender.tools.exome.allelefraction.MinorAlleleFractionCache;

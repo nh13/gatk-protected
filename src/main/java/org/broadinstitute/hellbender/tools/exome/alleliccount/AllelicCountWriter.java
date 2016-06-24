@@ -1,6 +1,6 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.alleliccount;
 
-import org.broadinstitute.hellbender.tools.exome.AllelicCountTableColumn.AllelicCountTableVerbosity;
+import org.broadinstitute.hellbender.tools.exome.alleliccount.AllelicCountTableColumn.AllelicCountTableVerbosity;
 import org.broadinstitute.hellbender.utils.tsv.DataLine;
 import org.broadinstitute.hellbender.utils.tsv.TableWriter;
 

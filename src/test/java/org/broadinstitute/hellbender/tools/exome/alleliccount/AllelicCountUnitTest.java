@@ -1,5 +1,6 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.alleliccount;
 
+import org.broadinstitute.hellbender.tools.exome.alleliccount.AllelicCount;
 import org.broadinstitute.hellbender.utils.Nucleotide;
 import org.broadinstitute.hellbender.utils.SimpleInterval;
 import org.testng.Assert;

@@ -1,9 +1,8 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.alleliccount;
 
 import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
 import org.broadinstitute.hellbender.exceptions.UserException;
-import org.broadinstitute.hellbender.tools.exome.AllelicCountTableColumn.AllelicCountTableVerbosity;
 import org.broadinstitute.hellbender.utils.Nucleotide;
 import org.broadinstitute.hellbender.utils.SimpleInterval;
 import org.broadinstitute.hellbender.utils.tsv.DataLine;
@@ -21,7 +20,7 @@ import java.util.Set;
  */
 public class AllelicCountReader extends TableReader<AllelicCount> {
 
-    private final AllelicCountTableVerbosity verbosity;
+    private final AllelicCountTableColumn.AllelicCountTableVerbosity verbosity;
 
     /**
      * Opens a reader on an a pre-existing allelic counts tab-separated file.
@@ -38,11 +37,11 @@ public class AllelicCountReader extends TableReader<AllelicCount> {
 
         /* detect verbosity level */
         if (columns().containsAll(AllelicCountTableColumn.FULL_COLUMNS.names())) {
-            verbosity = AllelicCountTableVerbosity.FULL;
+            verbosity = AllelicCountTableColumn.AllelicCountTableVerbosity.FULL;
         } else if (columns().containsAll(AllelicCountTableColumn.INTERMEDIATE_COLUMNS.names())) {
-            verbosity = AllelicCountTableVerbosity.INTERMEDIATE;
+            verbosity = AllelicCountTableColumn.AllelicCountTableVerbosity.INTERMEDIATE;
         } else if (columns().containsAll(AllelicCountTableColumn.BASIC_COLUMNS.names())) {
-            verbosity = AllelicCountTableVerbosity.BASIC;
+            verbosity = AllelicCountTableColumn.AllelicCountTableVerbosity.BASIC;
         } else {
             final Set<String> missingColumns = Sets.difference(
                     new HashSet<>(AllelicCountTableColumn.BASIC_COLUMNS.names()), new HashSet<>(columns().names()));
@@ -60,13 +59,13 @@ public class AllelicCountReader extends TableReader<AllelicCount> {
         final int refReadCount = dataLine.getInt(AllelicCountTableColumn.REF_COUNT.name());
         final int altReadCount = dataLine.getInt(AllelicCountTableColumn.ALT_COUNT.name());
 
-        if (verbosity == AllelicCountTableVerbosity.BASIC) {
+        if (verbosity == AllelicCountTableColumn.AllelicCountTableVerbosity.BASIC) {
             return new AllelicCount(interval, refReadCount, altReadCount);
         } else {
             final Nucleotide refNucleotide = Nucleotide.valueOf(dataLine.get(AllelicCountTableColumn.REF_NUCLEOTIDE.name()).getBytes()[0]);
             final Nucleotide altNucleotide = Nucleotide.valueOf(dataLine.get(AllelicCountTableColumn.ALT_NUCLEOTIDE.name()).getBytes()[0]);
             final int readDepth = dataLine.getInt(AllelicCountTableColumn.READ_DEPTH.name());
-            if (verbosity == AllelicCountTableVerbosity.INTERMEDIATE) {
+            if (verbosity == AllelicCountTableColumn.AllelicCountTableVerbosity.INTERMEDIATE) {
                 return new AllelicCount(interval, refReadCount, altReadCount, refNucleotide, altNucleotide, readDepth);
             } else { /* verbosity == AllelicCountTableVerbosity.FULL */
                 final double hetLogOdds = dataLine.getDouble(AllelicCountTableColumn.HET_LOG_ODDS.name());
