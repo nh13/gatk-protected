@@ -2,7 +2,7 @@ package org.broadinstitute.hellbender.tools.exome.eval;
 
 import htsjdk.variant.variantcontext.VariantContext;
 import htsjdk.variant.vcf.VCFConstants;
-import org.broadinstitute.hellbender.tools.exome.CopyNumberTriStateAllele;
+import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateAllele;
 import org.broadinstitute.hellbender.tools.exome.GenotypeCopyNumberTriStateSegments;
 import org.broadinstitute.hellbender.utils.GATKProtectedVariantContextUtils;
 import org.broadinstitute.hellbender.utils.MathUtils;

@@ -1,4 +1,4 @@
-package org.broadinstitute.hellbender.tools.exome.hmm;
+package org.broadinstitute.hellbender.tools.exome.germlinehmm;
 
 import com.google.common.annotations.VisibleForTesting;
 import org.apache.commons.math3.random.RandomGenerator;

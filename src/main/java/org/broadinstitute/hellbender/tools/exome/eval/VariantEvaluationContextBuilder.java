@@ -3,10 +3,9 @@ package org.broadinstitute.hellbender.tools.exome.eval;
 import htsjdk.variant.variantcontext.*;
 import htsjdk.variant.vcf.VCFConstants;
 import org.broadinstitute.hellbender.exceptions.GATKException;
-import org.broadinstitute.hellbender.tools.exome.CopyNumberTriStateAllele;
+import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateAllele;
 import org.broadinstitute.hellbender.utils.MathUtils;
 import org.broadinstitute.hellbender.utils.Utils;
-import org.broadinstitute.hellbender.utils.param.ParamUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package org.broadinstitute.hellbender.tools.exome.hmm;
+package org.broadinstitute.hellbender.tools.exome.germlinehmm;
 
 import org.broadinstitute.hellbender.tools.exome.Target;
 import org.broadinstitute.hellbender.utils.SimpleInterval;

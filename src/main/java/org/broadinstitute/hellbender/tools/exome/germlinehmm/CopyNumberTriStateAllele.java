@@ -1,4 +1,4 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.germlinehmm;
 
 import htsjdk.variant.variantcontext.Allele;
 import htsjdk.variant.vcf.VCFHeader;

@@ -1,5 +1,6 @@
-package org.broadinstitute.hellbender.tools.exome;
+package org.broadinstitute.hellbender.tools.exome.germlinehmm;
 
+import org.broadinstitute.hellbender.tools.exome.SegmentTableColumn;
 import org.broadinstitute.hellbender.utils.tsv.DataLine;
 import org.broadinstitute.hellbender.utils.tsv.TableWriter;
 

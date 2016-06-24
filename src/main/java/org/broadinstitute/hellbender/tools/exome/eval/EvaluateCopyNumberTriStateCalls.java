@@ -14,6 +14,7 @@ import org.broadinstitute.hellbender.cmdline.*;
 import org.broadinstitute.hellbender.cmdline.programgroups.CopyNumberProgramGroup;
 import org.broadinstitute.hellbender.exceptions.UserException;
 import org.broadinstitute.hellbender.tools.exome.*;
+import org.broadinstitute.hellbender.tools.exome.germlinehmm.CopyNumberTriStateAllele;
 import org.broadinstitute.hellbender.utils.*;
 
 import java.io.BufferedReader;
